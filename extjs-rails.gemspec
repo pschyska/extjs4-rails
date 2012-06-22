@@ -14,4 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "extjs-rails"
   gem.require_paths = ["lib"]
   gem.version       = Extjs::Rails::VERSION
+
+  gem.add_dependency "rake"
+  gem.add_dependency "compass"
 end
