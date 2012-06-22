@@ -3,7 +3,7 @@
 
 require 'sass/script/functions'
 
-module ExtjsRails
+module Extjs4Rails
   module SassExtensions
     module Functions
       module Utils
@@ -47,7 +47,7 @@ module ExtjsRails
           theme = theme.value
           without_url = (without_url.class == FalseClass) ? without_url : without_url.value
           
-          asset_path = '/assets/extjs-rails'
+          asset_path = '/assets/extjs4-rails'
           image_path = File.join(asset_path, theme, path)
           
           url = without_url ? image_path : "url('#{image_path}')"
@@ -55,7 +55,7 @@ module ExtjsRails
         end
 
         def theme_image_exists(path)
-          where_to_look = path.value.gsub('/assets/extjs-rails', 'vendor/assets/images/extjs-rails')
+          where_to_look = path.value.gsub('/assets/extjs4-rails', 'vendor/assets/images/extjs4-rails')
           result = where_to_look && FileTest.exists?("#{where_to_look}")
           return Sass::Script::Bool.new(result)
         end
@@ -65,5 +65,5 @@ module ExtjsRails
 end
 
 module Sass::Script::Functions
-  include ExtjsRails::SassExtensions::Functions::Utils
+  include Extjs4Rails::SassExtensions::Functions::Utils
 end

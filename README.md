@@ -1,4 +1,4 @@
-# Extjs::Rails
+# Extjs4::Rails
 
 This is a simple Rails asset pipeline gem packaging the [Sencha Ext JS
 Framework](http://www.sencha.com/products/extjs/) (GPL version). It is
@@ -15,7 +15,7 @@ The currently bundled version is Ext JS 4.1.0 GPL
 
 Add this line to your application's Gemfile:
 
-    gem 'extjs-rails'
+    gem 'extjs4-rails'
 
 And then execute:
 
@@ -23,22 +23,22 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install extjs-rails
+    $ gem install extjs4-rails
 
 ## Usage
 
 Just include the desired theme css file
 
-    <%= stylesheet_include_tag 'extjs-rails/ext-all' %>
+    <%= stylesheet_include_tag 'extjs4-rails/ext-all' %>
 
 and JS file
 
-    <%= javascript_include_tag 'extjs-rails/ext-all' %> 
+    <%= javascript_include_tag 'extjs4-rails/ext-all' %> 
 
 Don't forget to add the chosen files to config.assets.precompile
     
-    config.assets.precompile << 'extjs-rails/ext-all.js'
-    config.assets.precompile << 'extjs-rails/ext-all.css'
+    config.assets.precompile << 'extjs4-rails/ext-all.js'
+    config.assets.precompile << 'extjs4-rails/ext-all.css'
 
 Note: The ext-all\*.js versions should be used, as Ext JS' dynamic class
 loading is incompatible with the asset pipeline.
