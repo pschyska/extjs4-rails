@@ -1,8 +1,8 @@
 # Extjs::Rails
 
-This is a simple Rails asset pipeline gem packaging the [Sencha Ext JS
-Framework|http://www.sencha.com/products/extjs/] (GPL version). It is
-based on [ext\_rails\_shim|https://github.com/sakuro/ext_rails_shim], 
+This is a simple Rails asset pipeline gem packaging the (Sencha Ext JS
+Framework)[http://www.sencha.com/products/extjs/] (GPL version). It is
+based on (ext\_rails\_shim)[https://github.com/sakuro/ext_rails_shim], 
 but without any Rails integration besides making the assets available to
 the asset pipeline.
 
