@@ -38,6 +38,10 @@ and JS file
 Note: The ext-all\*.js versions should be used, as Ext JS' dynamic class
 loading is incompatible with the asset pipeline.
 
+## License
+
+Like Ext JS, [GPLv3](http://www.gnu.org/copyleft/gpl.html)
+
 ## Contributing
 
 1. Fork it
