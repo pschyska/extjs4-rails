@@ -29,18 +29,23 @@ Or install it yourself as:
 
 Just include the desired theme css file
 
-    <%= stylesheet_include_tag 'ext4/ext-all' %>
+    <%= stylesheet_include_tag 'extjs-rails/ext-all' %>
 
 and JS file
 
-    <%= javascript_include_tag 'ext4/ext-all' %> 
+    <%= javascript_include_tag 'extjs-rails/ext-all' %> 
+
+Don't forget to add the chosen files to config.assets.precompile
+    
+    config.assets.precompile << 'extjs-rails/ext-all.js'
+    config.assets.precompile << 'extjs-rails/ext-all.css'
 
 Note: The ext-all\*.js versions should be used, as Ext JS' dynamic class
 loading is incompatible with the asset pipeline.
 
 ## License
 
-Like Ext JS, [GPLv3](http://www.gnu.org/copyleft/gpl.html)
+[GPLv3](http://www.gnu.org/copyleft/gpl.html) like Ext JS.
 
 ## Contributing
 
