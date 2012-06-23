@@ -9,7 +9,7 @@ namespace :'extjs4-rails' do
   directory JAVASCRIPTS_DIR
   directory STYLESHEETS_DIR
 
-  desc 'Install Ext.js scripts and themes'
+  desc 'Install Ext JS scripts and themes'
   task :install => %w(install:javascripts install:themes)
 
 
