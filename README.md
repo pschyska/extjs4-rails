@@ -43,6 +43,15 @@ Don't forget to add the chosen files to config.assets.precompile
 Note: The ext-all\*.js versions should be used, as Ext JS' dynamic class
 loading is incompatible with the asset pipeline.
 
+## Rake task
+
+You can fork this gem and run
+
+    EXTJS_DIR=/path/to/extjs-4.x.x rake --trace extjs4-rails:install
+
+to rebuild Ext JS, i.e. when you built your own theme.
+
+
 ## License
 
 [GPLv3](http://www.gnu.org/copyleft/gpl.html) like Ext JS.
