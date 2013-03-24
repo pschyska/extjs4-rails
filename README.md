@@ -1,3 +1,9 @@
+# NOTE: This gem is discontinued
+Due to recent changes in the Sencha build chain requiring Sencha CMD
+(which I didn't get to run on my system), this gem is discontinued.
+Please use the Sencha provided tools to generate an application.
+If anyone has an idea how to do it, feel free to send a pull request :-)
+
 # Extjs4::Rails
 
 This is a simple Rails asset pipeline gem packaging the [Sencha Ext JS
