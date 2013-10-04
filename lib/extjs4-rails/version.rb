@@ -1,5 +1,5 @@
 module Extjs4
   module Rails
-    VERSION = "4.1.1"
+    VERSION = "4.2.1.883"
   end
 end
