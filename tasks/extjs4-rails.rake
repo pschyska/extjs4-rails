@@ -5,6 +5,7 @@ namespace :'extjs4-rails' do
   IMAGES_DIR      = ASSETS_DIR + '/images/extjs4-rails'
   JAVASCRIPTS_DIR = ASSETS_DIR + '/javascripts/extjs4-rails'
   STYLESHEETS_DIR = ASSETS_DIR + '/stylesheets/extjs4-rails'
+  UX_DIR          = ASSETS_DIR + '/ux/extjs4-rails/src/ux'
 
   THEME_NAME = ENV['EXTJS_THEME'] || 'classic'
   EXTJS_DIR  = ENV.has_key?('EXTJS_DIR') ? File.expand_path(ENV['EXTJS_DIR']) : nil
@@ -13,9 +14,10 @@ namespace :'extjs4-rails' do
   directory IMAGES_DIR
   directory JAVASCRIPTS_DIR
   directory STYLESHEETS_DIR
+  directory UX_DIR
 
   desc 'Install Ext JS scripts and themes'
-  task :install => %w(install:clean install:javascripts install:themes)
+  task :install => %w(install:clean install:javascripts install:themes install:ux)
 
   namespace :install do
     task clean: ASSETS_DIR do
@@ -55,6 +57,11 @@ namespace :'extjs4-rails' do
       sh *compass_command_line
 
       Dir.glob("#{STYLESHEETS_DIR}/*-debug.css").each {|file| File.rename(file, file.gsub('-debug', '')) }
+    end
+
+    task ux: UX_DIR do
+      ux_DIRs = FileList["#{EXTJS_DIR}/examples/ux/*"]
+      cp_r ux_DIRs, UX_DIR
     end
   end
 end
