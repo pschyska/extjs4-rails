@@ -66,7 +66,7 @@ namespace :'extjs4-rails' do
   end
 end
 
-Rake.application.tasks_in_scope(Rake::Scope.new("extjs4-rails:install")).each do |t|
+Rake.application.tasks_in_scope(["extjs4-rails", "install"]).each do |t|
   next if t.name == 'extjs4-rails:install:extjs_dir'
   t.prerequisites.unshift 'extjs4-rails:install:extjs_dir'
 end
