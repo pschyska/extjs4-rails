@@ -1,21 +1,15 @@
-# NOTE: This gem is discontinued
-Due to recent changes in the Sencha build chain requiring Sencha CMD
-(which I didn't get to run on my system), this gem is discontinued.
-Please use the Sencha provided tools to generate an application.
-If anyone has an idea how to do it, feel free to send a pull request :-)
-
 # Extjs4::Rails
 
 This is a simple Rails asset pipeline gem packaging the [Sencha Ext JS
 Framework](http://www.sencha.com/products/extjs/) (GPL version). It is
-based on [ext\_rails\_shim](https://github.com/sakuro/ext_rails_shim), 
+based on [ext\_rails\_shim](https://github.com/sakuro/ext_rails_shim),
 but without any Rails integration besides making the assets available to
 the asset pipeline.
 
 The Ext JS default themes have been recompiled to update the image
 assets paths to conform to Rails asset pipeline conventions.
 
-The currently bundled version is Ext JS 4.1.0 GPL
+The currently bundled version is Ext JS 4.2.1.883 GPL.
 
 ## Installation
 
@@ -39,24 +33,30 @@ Just include the desired theme css file
 
 and JS file
 
-    <%= javascript_include_tag 'extjs4-rails/ext-all' %> 
+    <%= javascript_include_tag 'extjs4-rails/ext-all-classic' %>
 
 Don't forget to add the chosen files to config.assets.precompile
-    
+
     config.assets.precompile << 'extjs4-rails/ext-all.js'
-    config.assets.precompile << 'extjs4-rails/ext-all.css'
+    config.assets.precompile << 'extjs4-rails/ext-all-classic.css'
 
 Note: The ext-all\*.js versions should be used, as Ext JS' dynamic class
 loading is incompatible with the asset pipeline.
+
+You can also include specific files from the Sencha UX folders
+
+    <%= javascript_include_tag 'extjs4-rails/src/ux/grid/menu/RangeMenu' %>
 
 ## Rake task
 
 You can fork this gem and run
 
-    EXTJS_DIR=/path/to/extjs-4.x.x rake --trace extjs4-rails:install
+    EXTJS_DIR=/path/to/extjs-4.x.x EXTJS_THEME=classic rake --trace extjs4-rails:install
 
 to rebuild Ext JS, i.e. when you built your own theme.
 
+EXTJS_THEME can be set to classic or neptune to build the preinstalled Sencha themes.
+Set to the name of your own theme as appropriate.
 
 ## License
 
