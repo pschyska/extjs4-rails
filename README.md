@@ -1,3 +1,10 @@
+# Main repo moved
+
+As I don't use Ext JS any more in my projects, I won't find the time to
+maintain this gem. However, @tlrdstd has agreed to take it over at his
+fork at https://github.com/tlrdstd/extjs4-rails. Thanks again, Tyler!
+
+
 # Extjs4::Rails
 
 This is a simple Rails asset pipeline gem packaging the [Sencha Ext JS
