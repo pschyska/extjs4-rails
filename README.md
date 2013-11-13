@@ -1,7 +1,7 @@
 # Main repo moved
 
 As I don't use Ext JS any more in my projects, I won't find the time to
-maintain this gem. However, @tlrdstd has agreed to take it over at his
+maintain this gem. However, [@tlrdstd](https://github.com/tlrdstd) has agreed to take it over at his
 fork at https://github.com/tlrdstd/extjs4-rails. Thanks again, Tyler!
 
 
